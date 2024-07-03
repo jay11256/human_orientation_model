@@ -6,9 +6,10 @@ import shutil
 import random
 
 # Global variables
-big_directory = "205" # Path to directory containing all of the images
-sub_directory = "test_frames" # Path to or name of a new directory
-num = 200 # Amount of images to randomly sample from the big directory
+big_directory = "/home/hsw/unprocessed_images" # Path to directory containing all of the images
+sub_directory = "sampled_images" # Path to or name of a new directory
+num = 500 # Amount of images to randomly sample from the big directory
+random.seed(20)
 
 # Creates directories, prints if they exist already
 def create_path(path):
@@ -23,10 +24,11 @@ create_path(sub_directory)
 # Accessing the images in the big directory
 images = os.listdir(big_directory)
 images.sort()
-# random.seed(20)
-# random.shuffle(images)
+copy = images[:-200] # Last 200 images are being used as test data
+random.shuffle(copy)
+images[:-200] = copy
 
 # Looping through the first X images and copying them
-filler = 3000000
+filler = 1000000
 for i in range(num):
     shutil.copyfile(f"{big_directory}/{images[-1 - i]}", f"{sub_directory}/{str(filler - i)}.jpg")
