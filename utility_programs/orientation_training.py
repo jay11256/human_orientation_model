@@ -8,13 +8,11 @@ from PIL import Image
 yaml_path = "datasets/orientation.yaml"
 
 # Choosing model
-scratch_model = YOLO("yolov8l.yaml")
 model = YOLO("yolov8n.pt")
-old_model = YOLO("runs/detect/train5.0/weights/best.pt")
 
 # Start training based off of yolov8m
 def coco():
-    results = model.train(data="yaml_path",
+    results = model.train(data=yaml_path,
                         epochs=100,
                         cache=True,
                         project="training_results",
