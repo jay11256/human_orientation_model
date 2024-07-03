@@ -31,4 +31,4 @@ images[:-200] = copy
 # Looping through the first X images and copying them
 filler = 1000000
 for i in range(num):
-    shutil.copyfile(f"{big_directory}/{images[-1 - i]}", f"{sub_directory}/{str(filler - i)}.jpg")
+    shutil.copyfile(f"{big_directory}/{images[i]}", f"{sub_directory}/{str(filler + i)}.jpg")

@@ -19,9 +19,9 @@ import matplotlib.pyplot as plt
 import pyautogui
 
 # Paths to folders being accessed and used
-images_path = "test_frames" # Path to directory containing images
-labels_path = "test_pose_labels" # Path to directory containing predicted labels
-results_path = "test_ori_labels" # Path to directory containing processed labels
+images_path = "data_labeling/sampled_images" # Path to directory containing images
+labels_path = "data_labeling/pose_labels" # Path to directory containing predicted pose labels
+results_path = "data_labeling/orientation_labels" # Path to directory containing processed labels
 
 def valid_list(list, n):
     if (len(list) != n):
@@ -36,7 +36,7 @@ images = os.listdir(images_path)
 images.sort()
 
 # Finding starting point
-preserved = open("orientation_model/preserved_data.txt", "r") #552
+preserved = open("data_labeling/preserved_data.txt", "r") #552
 start_index = int(preserved.read(5))
 preserved.close()
 
