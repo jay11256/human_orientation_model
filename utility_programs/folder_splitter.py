@@ -8,10 +8,10 @@ import random
 
 # Parameters
 dataset_dir = "datasets" # Name of the datasets directory
-dataset_name = "5+6" # Name of the dataset 
+dataset_name = "500" # Name of the dataset 
 train_ratio, valid_ratio, test_ratio = 0.9, 0.1, 0.0 # Ratio
-images_dir = "temporary" # Folder containing the annotated images
-labels_dir = "random_2k_labels" # Folder containing the labels
+images_dir = "data_labeling/pose_images" # Folder containing the pose annotated images
+labels_dir = "data_labeling/orientation_labels" # Folder containing the labels
 
 # Creates directories, prints if they exist already
 def create_path(path):
