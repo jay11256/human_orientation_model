@@ -22,7 +22,8 @@ def old():
     results = old_model.train(data="orientation_model/orientation.yaml",
                         epochs=100,
                         cache=True,
-                        name="train5.1",
+                        project="trained_models",
+                        name="train1.0",
                         fliplr=0.0,
                         lr0=0.05)
 

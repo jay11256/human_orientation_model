@@ -36,7 +36,7 @@ images = os.listdir(images_path)
 images.sort()
 
 # Finding starting point
-preserved = open("data_labeling/preserved_data.txt", "r") #552
+preserved = open("data_labeling/preserved_data.txt", "r")
 start_index = int(preserved.read(5))
 preserved.close()
 
@@ -117,7 +117,7 @@ for image in images[start_index:]:
     plt.close()
 
     # Saving current location in all of the data
-    preserved = open("orientation_model/preserved_data.txt", "w")
+    preserved = open("data_labeling/preserved_data.txt", "w")
     start_index += 1
     preserved.write(str(start_index))
     preserved.close()

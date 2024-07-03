@@ -9,7 +9,7 @@ import random
 # Parameters
 dataset_dir = "datasets" # Name of the datasets directory
 dataset_name = "5+6" # Name of the dataset 
-train_ratio, valid_ratio, test_ratio = 0.8, 0.1, 0.1 # Ratio
+train_ratio, valid_ratio, test_ratio = 0.9, 0.1, 0.0 # Ratio
 images_dir = "temporary" # Folder containing the annotated images
 labels_dir = "random_2k_labels" # Folder containing the labels
 
