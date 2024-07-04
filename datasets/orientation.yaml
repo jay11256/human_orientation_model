@@ -1,6 +1,6 @@
 train: "../500/train/images"
 val: "../500/valid/images"
-test: "../102_test/images"
+test: "../103_test/images"
 
 names:
   0: N
