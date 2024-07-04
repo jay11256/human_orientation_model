@@ -7,8 +7,8 @@ import random
 
 # Global variables
 big_directory = "/home/hsw/unprocessed_images" # Path to directory containing all of the images
-sub_directory = "sampled_images" # Path to or name of a new directory
-num = 500 # Amount of images to randomly sample from the big directory
+sub_directory = "data_labeling/sampled_images" # Path to or name of a new directory
+num = 1000 # Amount of images to randomly sample from the big directory
 random.seed(20)
 
 # Creates directories, prints if they exist already
