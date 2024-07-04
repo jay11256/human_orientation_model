@@ -12,6 +12,7 @@ dataset_name = "500" # Name of the dataset
 train_ratio, valid_ratio, test_ratio = 0.9, 0.1, 0.0 # Ratio
 images_dir = "data_labeling/pose_images" # Folder containing the pose annotated images
 labels_dir = "data_labeling/orientation_labels" # Folder containing the labels
+random.seed(20)
 
 # Creates directories, prints if they exist already
 def create_path(path):
